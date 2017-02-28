@@ -1,0 +1,114 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Autocomplete - Remote JSONP datasource</title>
+  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <style>
+  
+  #city { width: 25em; }
+  </style>
+  m
+</head>
+<body>
+ 
+<div class="ui-widget">
+  <label for="city">Your city: </label>
+  <input id="city">
+  Powered by <a href="http://geonames.org">geonames.org</a>
+</div>
+ 
+<div class="ui-widget" style="margin-top:2em; font-family:Arial">
+  Result:
+  <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+</div>
+ 
+ 
+</body>
+</html>
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Autocomplete - Custom data and display</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <style>
+  #project-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  #project-icon {
+    float: left;
+    height: 32px;
+    width: 32px;
+  }
+  #project-description {
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  <script>
+  $(function() { 
+    $( "#project" ).autocomplete({
+      minLength: 0,
+      source:  function( request, response ) {
+			$.ajax({
+				url: "prueba2.php",
+				type: "post",
+				dataType: "json",
+				data: {
+				term: request.term
+				},
+				success: function(data) {
+					response(data);
+				}
+			});
+		},
+      focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.ID );
+        return false;
+      },
+      select: function( event, ui ) {
+        $( "#project" ).val( ui.item.ID );
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( "<a href=\"\">" + item.ID + "<br>" + item.NOM + "</a>" )
+        .appendTo( ul );
+    };
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="project-label">Select a project (type "j" for a start):</div>
+<input id="project">
+
+ 
+ 
+</body>
+</html>

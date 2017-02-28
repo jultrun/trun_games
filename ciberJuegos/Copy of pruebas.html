@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="js/jquerry/ui/jquery-ui.css">
+  <script src="js/jquerry/jquery-1.12.3.js"></script>
+  <script src="js/jquerry/ui/jquery-ui.js"></script>
+  <script src="js/jquerry/ui/i18n/datepicker-es.js"></script>
+  <script>
+  $(function() {
+	$.datepicker.setDefaults( $.datepicker.regional[ "es" ] );
+    $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        maxDate: new Date()
+      });
+  });
+  </script>
+</head>
+<body>
+ 
+<p>Date: <input type="text" id="datepicker"></p>
+ 
+ 
+</body>
+</html>

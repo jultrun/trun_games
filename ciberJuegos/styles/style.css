@@ -1,0 +1,275 @@
+body {
+	background: #646464;
+}
+
+header {
+	width: 100%;
+	height: 46px;
+	color: #fff;
+	background: #333;
+	background: linear-gradient(to right, #333, #555);
+	background-image: url("../styles/img/header.png");
+}
+
+/*menu*/
+#page-menu>li, #account-menu>li {
+	float: left;
+}
+
+/**/
+ul#page-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+ul#page-menu li {
+	display: inline;
+	position: relative;
+	overflow: hidden;
+}
+
+#page-menu a {
+	top: -60px;
+	display: inline-block;
+	color: #fff; background : #444; background : linear-gradient( to bottom
+	, #444, #363636, #141414);
+	text-align: center;
+	padding: 14px 21px;
+	text-decoration: none;
+	background: #444;
+	background: linear-gradient(to bottom, #444, #363636, #141414);
+}
+
+#page-menu a:hover {
+	background: linear-gradient(to top, #444, #363636, #141414);
+}
+
+ul#page-menu li ul {
+	position: absolute;
+	padding: 0;
+}
+
+ul#page-menu li ul li {
+	list-style: none;
+	position: relative;
+	float: right;
+	margin: 0;
+}
+
+ul#page-menu li:hover {
+	overflow: visible;
+}
+
+ul#page-menu li ul li:hover {
+	overflow: visible;
+}
+
+/**/
+ul#account-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	float: right;
+}
+
+ul#account-menu li {
+	display: inline;
+	position: relative;
+	padding-left: 10px;
+	overflow: hidden;
+}
+
+#account-menu a {
+	top: -60px;
+	display: inline-block;
+	color: #000;
+	background: #ebebeb;
+	background: linear-gradient(to bottom, #ebebeb, #c9c9c9, #bbbbbb);
+	text-align: center;
+	padding: 14px 21px;
+	text-decoration: none;
+	min-width: 80px;
+}
+
+#account-menu a:hover {
+	background: linear-gradient(to top, #ebebeb, #c9c9c9, #bbbbbb);
+}
+
+ul#account-menu li ul li {
+	list-style: none;
+	position: relative;
+	float: right;
+	margin: 0;
+}
+
+ul#account-menu li ul {
+	position: absolute;
+	right: -0px;
+}
+
+ul#account-menu li:hover {
+	overflow: visible;
+}
+
+ul#account-menu li ul li:hover {
+	overflow: visible;
+}
+
+/*buscador*/
+#form-buscador-juego {
+    margin: 0 3px 0 0;
+    padding: 9px 15px;
+    position: relative;
+    float: right;
+}
+#buscador-juego {
+	border: none;
+    width: 180px;
+    outline: none;
+    line-height: 28px;
+}
+#boton-busqueda {
+	background: #e4e4e4;
+	border-radius: 0 5px 5px 0;
+    display: block;
+    float: right;
+    margin: 0;
+    width: 36px;
+    height: 30px;
+	
+}
+.busqueda-precio{
+	font-size: 60%;
+}
+/*pagina*/
+/*
+article {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	background: #333;
+	margin: 10px auto 0 auto;
+	display: table;
+}
+*/
+section {
+	border: 10px solid #000;
+	height: 100%;
+	background: #fff;
+	margin: 10px 0px 0px 0px;
+	padding: 10px;
+	display: inherit;
+}
+span.ptitulo {
+	border-radius: 0 10px 10px 0;
+	background: #333;
+	color: #fff;
+	 padding: 5px;
+	
+}
+#games-tabla {
+	float: right;
+    background: #333;
+    color: #fff;
+    border-radius: 10px
+}
+
+/*buscador avanzado*/
+
+.item-game{
+	width: 500px;
+    background: #333;
+    color: #fff;
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/*administacion*/
+
+
+#admin-menu>li {
+	float: left;
+}
+
+/**/
+ul#admin-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+ul#admin-menu li {
+	display: inline;
+	position: relative;
+	overflow: hidden;
+}
+
+#admin-menu a {
+	top: -60px;
+	display: inline-block;
+	color: #fff; background : #444; background : linear-gradient( to bottom
+	, #444, #363636, #141414);
+	text-align: center;
+	padding: 14px 21px;
+	text-decoration: none;
+	background: #444;
+	background: linear-gradient(to bottom, #444, #363636, #141414);
+}
+
+#admin-menu a:hover {
+	background: linear-gradient(to top, #444, #363636, #141414);
+}
+
+ul#admin-menu li ul {
+	position: absolute;
+	padding: 0;
+	z-index: 100;
+}
+
+ul#admin-menu li ul li {
+	list-style: none;
+	position: relative;
+	float: right;
+	margin: 0;
+}
+
+ul#admin-menu li:hover {
+	overflow: visible;
+}
+
+ul#admin-menu li ul li:hover {
+	overflow: visible;
+}
+
+
+#etiquetas div {
+    display: inline-block;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    padding: 2px;
+}
+#etiquetas div span{
+    background: blue;
+    display: inline-block;
+}
+
+.comentario {
+	background: #000;
+	padding: 10px;
+    margin: 10px;
+}
+.comentario div.comentariob {
+	background: #fff;
+	display:inline-block;
+    color: #000;
+	
+}
+.comentario div.comentariof {
+    color: #fff;
+	
+}
